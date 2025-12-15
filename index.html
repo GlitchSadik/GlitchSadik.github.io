@@ -1,20 +1,323 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio (Updating)</title>
-  <style>
-    body{font-family:system-ui,Arial;display:grid;place-items:center;height:100vh;margin:0;background:#0b1220;color:#e6eefc}
-    .box{max-width:720px;padding:28px;border:1px solid #223;border-radius:16px;background:rgba(255,255,255,.03)}
-    a{color:#7ab7ff}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlitchSadik — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="box">
-    <h1>Portfolio is being updated</h1>
-    <p>I’m currently updating my portfolio and projects. Please check back shortly.</p>
-    <p>Expected update: today.</p>
+
+  <!-- Floating Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
   </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo-icon">◆</span>
+      <span class="version">v1.0</span>
+    </div>
+    <nav class="topbar-nav">
+      <a href="#home" class="topbar-link active">HOME</a>
+      <a href="#about" class="topbar-link">ABOUT</a>
+      <a href="#projects" class="topbar-link">PROJECTS</a>
+      <a href="#skills" class="topbar-link">SKILLS</a>
+      <a href="#contact" class="topbar-link">CONTACT</a>
+    </nav>
+    <div class="topbar-right">
+      <span class="status-indicator"></span>
+      <span class="status-text">ONLINE</span>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="layout">
+
+    <!-- Left Sidebar Menu -->
+    <aside class="sidebar">
+      <nav class="sidebar-menu">
+        <a href="#home" class="menu-item active" data-section="home">
+          <span class="menu-dot">◆</span>
+          <span class="menu-text">PLAY</span>
+        </a>
+        <a href="#about" class="menu-item" data-section="about">
+          <span class="menu-dot">◆</span>
+          <span class="menu-text">ABOUT</span>
+        </a>
+        <a href="#projects" class="menu-item" data-section="projects">
+          <span class="menu-dot">◆</span>
+          <span class="menu-text">PROJECTS</span>
+        </a>
+        <a href="#skills" class="menu-item" data-section="skills">
+          <span class="menu-dot">◆</span>
+          <span class="menu-text">SKILLS</span>
+        </a>
+        <a href="#contact" class="menu-item" data-section="contact">
+          <span class="menu-dot">◆</span>
+          <span class="menu-text">CONTACT</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content">
+
+      <!-- Home Section -->
+      <section id="home" class="section active">
+        <div class="hero">
+          <div class="hero-info">
+            <div class="agent-badge">AGENT FILE</div>
+            <h1 class="hero-name">Md Imdadul Islam</h1>
+            <p class="hero-role">AI / Software Engineer • ML Research</p>
+            <p class="hero-bio">
+              Final-year Software Engineering student (DIU) focused on practical AI systems and clean backend engineering.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
+              <a href="#contact" class="btn-secondary">CONTACT ME</a>
+            </div>
+          </div>
+
+          <!-- Status Card -->
+          <div class="status-card">
+            <div class="card-header">
+              <span class="card-dot online"></span>
+              <span class="card-title">STATUS</span>
+            </div>
+            <div class="card-body">
+              <div class="info-row">
+                <span class="info-label">ROLE</span>
+                <span class="info-value">AI / Software Engineer</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">FOCUS</span>
+                <span class="info-value">RAG, LLM Apps, FastAPI</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">LOCATION</span>
+                <span class="info-value">Dhaka, Bangladesh</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">STATUS</span>
+                <span class="info-value highlight">Available for hire</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section">
+        <div class="section-header">
+          <h2 class="section-title">ABOUT</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3 class="about-card-title">Profile</h3>
+            <p class="about-card-text">Final-year Software Engineering student at Daffodil International University (Major: Data Science). I build ML/LLM features with reproducible pipelines, good evaluation, and clean APIs.</p>
+          </div>
+          <div class="about-card">
+            <h3 class="about-card-title">Looking For</h3>
+            <p class="about-card-text">Intern / junior roles in AI, ML, or backend engineering where I can ship real product features (ETL, APIs, RAG) while maintaining research-quality practices.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2 class="section-title">PROJECTS</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="mini-cards" aria-label="Project highlights">
+          <div class="mini-card">
+            <div class="mini-card__k">PRIMARY</div>
+            <div class="mini-card__v">AI + Backend</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card__k">HIGHLIGHT</div>
+            <div class="mini-card__v">Privacy-first RAG</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card__k">WORKFLOW</div>
+            <div class="mini-card__v">ETL Orchestration</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card__k">NOW</div>
+            <div class="mini-card__v">Open to chances</div>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-tag red">RAG / LLM</span>
+              <span class="project-id">AG-01</span>
+            </div>
+            <h3 class="project-name">UpscalePi</h3>
+            <p class="project-desc">Privacy-first local document Q&A assistant using LLaMA 2 (Ollama) with Pinecone/FAISS-backed retrieval.</p>
+            <div class="project-meta">
+              <span>Ollama</span>
+              <span>Pinecone / FAISS</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/GlitchSadik/UpscalePi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-tag cyan">ETL / API</span>
+              <span class="project-id">AG-02</span>
+            </div>
+            <h3 class="project-name">Airbyte ETL Orchestration API</h3>
+            <p class="project-desc">FastAPI integration to manage Airbyte connectors and trigger sync jobs programmatically (with error handling and rollback paths).</p>
+            <div class="project-meta">
+              <span>FastAPI</span>
+              <span>PostgreSQL</span>
+              <span>Airbyte</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-tag blue">Research</span>
+              <span class="project-id">AG-03</span>
+            </div>
+            <h3 class="project-name">Plant Disease Classification (Research)</h3>
+            <p class="project-desc">Research on data augmentation and deep learning methods for plant disease classification using MangoLeafBD and MLDID datasets.</p>
+            <div class="project-meta">
+              <span>Augmentation</span>
+              <span>CNN</span>
+              <span>Evaluation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <div class="section-header">
+          <h2 class="section-title">SKILLS</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-card-title">Languages</h3>
+            <div class="skill-list">
+              <button class="skill-item" type="button">C</button>
+              <button class="skill-item" type="button">C++</button>
+              <button class="skill-item" type="button">Python</button>
+              <button class="skill-item" type="button">Java</button>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card-title">AI / ML</h3>
+            <div class="skill-list">
+              <button class="skill-item" type="button">Machine Learning</button>
+              <button class="skill-item" type="button">Generative AI</button>
+              <button class="skill-item" type="button">LLMs</button>
+              <button class="skill-item" type="button">NLP</button>
+              <button class="skill-item" type="button">RAG</button>
+              <button class="skill-item" type="button">CNN / ANN</button>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card-title">Frameworks</h3>
+            <div class="skill-list">
+              <button class="skill-item" type="button">FastAPI</button>
+              <button class="skill-item" type="button">Django REST Framework</button>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card-title">Data / Tools</h3>
+            <div class="skill-list">
+              <button class="skill-item" type="button">Git</button>
+              <button class="skill-item" type="button">Docker</button>
+              <button class="skill-item" type="button">Postman</button>
+              <button class="skill-item" type="button">Airbyte</button>
+              <button class="skill-item" type="button">PostgreSQL</button>
+              <button class="skill-item" type="button">MySQL</button>
+              <button class="skill-item" type="button">Pinecone (Vector DB)</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <div class="section-header">
+          <h2 class="section-title">CONTACT</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h3 class="contact-card-title">Email</h3>
+            <a href="mailto:Sadik944493@gmail.com" class="contact-link">Sadik944493@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">◆</div>
+            <h3 class="contact-card-title">GitHub</h3>
+            <a href="https://github.com/GlitchSadik" target="_blank" class="contact-link">github.com/GlitchSadik</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">●</div>
+            <h3 class="contact-card-title">LinkedIn</h3>
+            <a href="https://linkedin.com/in/imdadulislam" target="_blank" class="contact-link">linkedin.com/in/imdadulislam</a>
+          </div>
+        </div>
+        <div class="contact-action">
+          <a href="mailto:Sadik944493@gmail.com" class="btn-primary large">SEND MESSAGE</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Panel (optional info) -->
+    <aside class="right-panel" id="rightPanel">
+      <button class="panel-toggle" id="rightPanelToggle" type="button" aria-controls="rightPanel" aria-expanded="true" title="Toggle panel">
+        <span class="panel-toggle__icon">▸</span>
+      </button>
+      <div class="info-card">
+        <div class="info-card-header">LATEST UPDATE</div>
+        <div class="info-card-body">
+          <p>Portfolio launched</p>
+          <span class="info-date">December 2025</span>
+        </div>
+      </div>
+        <div class="info-card">
+          <div class="info-card__header">STATS</div>
+          <div class="info-card__body">
+            <div class="mini-stats">
+              <div class="mini-stat"><span class="k">STACK</span><span class="v">FastAPI · PostgreSQL · AI</span></div>
+              <div class="mini-stat"><span class="k">TIMEZONE</span><span class="v">GMT +6 (Dhaka)</span></div>
+              <div class="mini-stat"><span class="k">AVAILABILITY</span><span class="v">Open to work</span></div>
+            </div>
+          </div>
+        </div>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>© <span id="year"></span> GlitchSadik</span>
+    <span class="footer-note">Valorant-inspired UI • Not affiliated with Riot Games</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
